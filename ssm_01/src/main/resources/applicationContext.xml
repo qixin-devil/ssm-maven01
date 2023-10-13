@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置bean-->
+    <bean id="bookDao" class="com.ityicai.Dao.Impl.BookDaoImpl" scope="singleton" init-method="init"
+          destroy-method="destory">
+        <property name="mysql" value="students"></property>
+        <property name="number" value="10"></property>
+
+    </bean>
+
+    <bean id="userDao" class="com.ityicai.Dao.Impl.UserDaoImpl"></bean>
+
+    <bean id="bookService" class="com.ityicai.Service.Impl.BookServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+        <property name="bookDao" ref="bookDao"></property>
+    </bean>
+
+    <bean id="bookDao1" class="com.ityicai.Factory.BookDaoFactoryBean"></bean>
+
+
+</beans>

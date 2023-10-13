@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ssm" />
+        <module name="maven-text1" />
+        <module name="javaee-sql" />
+        <module name="ssm_01" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17">
+      <module name="javaee-sql" target="17" />
+      <module name="maven-text1" target="17" />
+      <module name="ssm" target="17" />
+      <module name="ssm_01" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
